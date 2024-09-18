@@ -12,7 +12,7 @@ public class Cliente extends Pessoa implements Login {
     // Atributos do cliente
     private LocalDate dataCadastro;
 
-    // CONSTRUTOR
+    //  CONSTRUTOR
     public Cliente(int idPessoa, String nomePessoa, String cpf, String dataNascimento, String email,
             String usuario, String senha, String telefone, String dataCadastro) {
         this.setNomePessoa(nomePessoa);
@@ -20,6 +20,7 @@ public class Cliente extends Pessoa implements Login {
         this.setDataNascimento(dataNascimento);
         this.setEmail(email);
         this.setUsuario(usuario);
+        // outros atributos a serem inicializados...
     }
 
     public Cliente(String nomeCliente) {
@@ -36,7 +37,7 @@ public class Cliente extends Pessoa implements Login {
             if (consulta.getAnimal().equals(animal)) {
                 System.out.println("Consulta em: " + consulta.getDataConsulta());
                 System.out.println("Veterinário: " + consulta.getVeterinario());
-               // System.out.println("Status da consulta " + consulta.(EnumStatusConsulta));
+                //System.out.println("Status da consulta " + consulta.(EnumStatusConsulta.AGENDADA));
                 System.out.println("----------------------------");
                 encontrouConsulta = true;
             }
@@ -52,7 +53,7 @@ public class Cliente extends Pessoa implements Login {
         listaDePets.add(nomeAnimal);
     }
 
-    // Método de login (interface login)
+    // Método de login (implementação do interface Login)
     public void login() {
         _MenuCliente.menuCliente(); // Exemplo de chamada de menu
     }

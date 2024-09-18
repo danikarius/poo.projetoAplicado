@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class _MenuVet {
     public static void menuVet(){
     //Ambiente virtual de vets da clinica vet
-    //Boas vindas
-    //Menu
-    //Registrar um atendimento de um Pet
-    //Histórico de prontuários de todos pets
-    //Lista de pets para revisita (+ de 6meses sem consultar)
+    //boas vindas vet FULANO
+    //Menu:
+    //registrar um atendimento de um Pet
+    //histórico de prontuários de todos pets
+    //lista de pets para revisita (+ de 6meses sem consultar)
 
     int opcaoVet;
     Scanner sc = new Scanner(System.in);
@@ -28,13 +28,13 @@ public class _MenuVet {
 
         switch (opcaoVet) {
             case 1:
-                Consulta.agendarConsulta(); // Chama o metodo em "cnsulta" para agendar a consulta.
+                Consulta.agendarConsulta(); // chama o metodo em Consulta para agendar a consulta
                 break;
             case 2:
-
+                Consulta.consultaProntuariosDeTodosPets(); // exibe a lista de pets por dono e seus prontuarios
                     break;
                 case 3:
-
+                Consulta.listaDePetsNegligenciados(); // exibe a lista de pets que foram consultados há mais de 6 meses
                     break;
                 default:
                     break;
